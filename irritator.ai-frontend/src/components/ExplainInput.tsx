@@ -25,7 +25,7 @@ const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formDa
                             <SelectTrigger className="w-full bg-gray-50  p-4 rounded-lg shadow-lg">
                                 <SelectValue placeholder="Select a Language" />
                             </SelectTrigger>
-                            <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg">
+                            <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg dark:bg-black">
                                 <SelectGroup>
                                     <SelectLabel>Language</SelectLabel>
                                     <SelectItem value="JavaScript">JavaScript</SelectItem>
@@ -42,7 +42,7 @@ const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formDa
                             <SelectTrigger className="w-full bg-gray-50  p-4 rounded-lg shadow-lg">
                                 <SelectValue placeholder="Select Char. Length" />
                             </SelectTrigger>
-                            <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg">
+                            <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg dark:bg-black">
                                 <SelectGroup>
                                     <SelectLabel>Character Length</SelectLabel>
                                     <SelectItem value="small">Small</SelectItem>
@@ -65,7 +65,7 @@ const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formDa
                         <Button
                             type="submit"
                             disabled={isPending}
-                            className=" px-6 py-2 rounded-lg text-white font-semibold hover:bg-gray-900 cursor-pointer transition disabled:opacity-50 rounded-lg shadow-lg"
+                            className=" px-6 py-2 rounded-lg text-white font-semibold hover:bg-gray-900 cursor-pointer transition disabled:opacity-50 rounded-lg shadow-lg dark:bg-black dark:bg-white dark:text-black"
                         >
                         {isPending ? <><Spinner/> Explaining... </>: "Explain Code"}
                         </Button>

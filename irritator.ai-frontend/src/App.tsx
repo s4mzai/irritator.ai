@@ -2,17 +2,20 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
+import { ThemeProvider } from './components/theme-provider'
+import Navbar from './components/Navbar'
 
 function App() {
   return(
-    <>
-      <div className='relative'>
-        <img className='w-15 h-15 absolute top-5 left-5 md:left-10' src="/irritator-dark.png" alt="" />
+    <ThemeProvider>
+      <div className='bg-white dark:bg-black'>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
-    </>
+    </ThemeProvider>
+    
   )
 }
 

@@ -7,7 +7,7 @@ const Home = ()=>{
     const [formState, formAction, isPending] = useActionState(explain, null);
     return(
         <>
-            <div className={`min-h-screen w-screen p-4 md:p-10 lg:gap-8 flex ${formState ? "items-start justify-center md:justify-between" : "items-center justify-center"} flex-col sm:flex-row mx-auto max-w-9xl` }>
+            <div className={`min-h-screen pt-20 w-screen p-4 md:p-10 lg:gap-8 flex ${formState ? "items-start justify-center md:justify-between" : "items-center justify-center"} flex-col sm:flex-row mx-auto max-w-9xl` }>
                 <ExplainInput
                   formAction={formAction}
                   isPending={isPending}
