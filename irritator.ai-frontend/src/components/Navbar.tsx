@@ -1,5 +1,5 @@
 import { ModeToggle } from '@/components/mode-toggle'
-
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 
 const Navbar = ()=> {
     return(
@@ -8,10 +8,7 @@ const Navbar = ()=> {
                 <div className='flex items-center gap-5'>
                     <h1 className='text-2xl font-bold bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 bg-clip-text text-transparent'>Irritator.ai</h1>
                 </div>
-
-                <div className=''>
-                    <ModeToggle/>
-                </div>
+                <AnimatedThemeToggler  className='cursor-pointer'/>
             </div>
         </>
     )

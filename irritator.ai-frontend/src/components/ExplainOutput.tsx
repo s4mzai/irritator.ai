@@ -1,13 +1,14 @@
 import CodeExplanation from "./CodeExplanation";
 import { Spinner } from "./ui/spinner";
+import { TextShimmer } from "@/components/motion-primitives/text-shimmer";
 
 const ExplainOutput = ({formState,isPending, className}:{formState:any,isPending:boolean, className?: string})=>{
     return(
         <>
             <div className={`${className ?? "w-[50%]"} h-full` }>
             {isPending ? (
-                <div className="w-full max-w-4xl mt-6 bg-gray-50  p-6 rounded-2xl shadow-lg">
-                    <p className="text-lg font-semibold  flex items-center gap-1"><><Spinner/> Thinking...</></p>
+                <div className="w-full max-w-4xl mt-6 bg-gray-50  p-6 rounded-2xl shadow-lg dark:bg-input/30 dark:text-white dark:border dark:border-input">
+                    <p className="text-lg font-semibold  flex items-center gap-1"> <TextShimmer className='font-mono text-sm' duration={1}>Thinking...</TextShimmer></p>
                 </div>
             ) : formState?.success ? (
             <CodeExplanation explanation={formState?.data.explanation} />
