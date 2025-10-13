@@ -62,7 +62,7 @@ const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formDa
                             value={code}
                             onChange={(e)=>setCode(e.target.value)}
                             placeholder="Paste your code here..."
-                            className="border rounded-[inherit] w-full p-6 font-mono text-sm bg-transparent min-h-[300px] max-w-4xl bg-gray-50 shadow-lg"
+                            className="border rounded-[inherit]  w-full p-6 font-mono text-sm bg-transparent min-h-[300px] max-w-4xl bg-gray-50 shadow-lg"
                         />
                         <BorderBeam
                             duration={6}

@@ -1,5 +1,4 @@
 import CodeExplanation from "./CodeExplanation";
-import { Spinner } from "./ui/spinner";
 import { TextShimmer } from "@/components/motion-primitives/text-shimmer";
 
 const ExplainOutput = ({formState,isPending, className}:{formState:any,isPending:boolean, className?: string})=>{
