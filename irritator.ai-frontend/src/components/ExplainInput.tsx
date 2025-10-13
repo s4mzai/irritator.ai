@@ -16,6 +16,8 @@ import { BorderBeam } from "@/components/ui/border-beam";
 
 const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formData: FormData) => void, isPending: boolean, className?: string })=>{
     const [code, setCode] = useState("")
+    const [language, setLanguage] = useState("")
+    const [charLength, setCharLength] = useState("")
     return(
         <>  
             <div className={`${className ?? "w-full"} h-full md:p-10`}>
@@ -23,36 +25,38 @@ const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formDa
                     <div className="w-full max-w-4xl mx-auto flex flex-col lg:flex-row gap-3 lg:gap-5 items-stretch lg:items-center lg:justify-between">
 
                         <div className="w-full lg:w-1/2">
-                        <Select name="language">
-                            <SelectTrigger className="w-full bg-gray-50  p-4 rounded-lg shadow-lg">
-                                <SelectValue placeholder="Select a Language" />
-                            </SelectTrigger>
-                            <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg dark:bg-black">
-                                <SelectGroup>
-                                    <SelectLabel>Language</SelectLabel>
-                                    <SelectItem value="JavaScript">JavaScript</SelectItem>
-                                    <SelectItem value="Python">Python</SelectItem>
-                                    <SelectItem value="C++">C++</SelectItem>
-                                    <SelectItem value="Java">Java</SelectItem>
-                                    <SelectItem value="Rust">Rust</SelectItem>
-                                </SelectGroup>
-                            </SelectContent>
-                        </Select>
+                            <Select value={language} onValueChange={setLanguage}>
+                                <SelectTrigger className="w-full bg-gray-50  p-4 rounded-lg shadow-lg">
+                                    <SelectValue placeholder="Select a Language ( Optional )  " />
+                                </SelectTrigger>
+                                <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg dark:bg-black">
+                                    <SelectGroup>
+                                        <SelectLabel>Language</SelectLabel>
+                                        <SelectItem value="JavaScript">JavaScript</SelectItem>
+                                        <SelectItem value="Python">Python</SelectItem>
+                                        <SelectItem value="C++">C++</SelectItem>
+                                        <SelectItem value="Java">Java</SelectItem>
+                                        <SelectItem value="Rust">Rust</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                            <input type="hidden" name="language" value={language} />
                         </div>
                         <div className="w-full lg:w-1/2">
-                        <Select name="charLength">
-                            <SelectTrigger className="w-full bg-gray-50  p-4 rounded-lg shadow-lg">
-                                <SelectValue placeholder="Select Char. Length" />
-                            </SelectTrigger>
-                            <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg dark:bg-black">
-                                <SelectGroup>
-                                    <SelectLabel>Character Length</SelectLabel>
-                                    <SelectItem value="small">Small</SelectItem>
-                                    <SelectItem value="medium">Medium</SelectItem>
-                                    <SelectItem value="large">Large</SelectItem>
-                                </SelectGroup>
-                            </SelectContent>
-                        </Select>
+                            <Select value={charLength} onValueChange={setCharLength}>
+                                <SelectTrigger className="w-full bg-gray-50  p-4 rounded-lg shadow-lg">
+                                    <SelectValue placeholder="Select Characters Length" />
+                                </SelectTrigger>
+                                <SelectContent className="w-fit bg-gray-50 rounded-lg shadow-lg dark:bg-black">
+                                    <SelectGroup>
+                                        <SelectLabel>Character Length</SelectLabel>
+                                        <SelectItem value="small">Small</SelectItem>
+                                        <SelectItem value="medium">Medium</SelectItem>
+                                        <SelectItem value="large">Large</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                            <input type="hidden" name="charLength" value={charLength} />
                         </div>
                     </div>
                     <div className="relative rounded-2xl overflow-hidden mt-6">

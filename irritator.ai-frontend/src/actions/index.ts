@@ -4,7 +4,7 @@ export async function explain(prevState:any, formData:any ) {
   const code = formData.get("code");
   const language = formData.get("language");
   const explainCharLength = formData.get("charLength") 
-  console.log(`Generating explanation for ${language}`);
+
   try {
     const baseUrl = import.meta.env.SERVER_URL || "http://localhost:3000";
     const res = await fetch(`${baseUrl}/api/explain-code`, {
