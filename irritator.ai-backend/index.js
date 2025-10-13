@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import rateLimit from 'express-rate-limit';
 
 dotenv.config();
 
@@ -13,6 +14,15 @@ app.use(cors({
     credentials: true,
 }))
 
+
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    standardHeaders: true,
+    legacyHeaders: false,
+  });
+  
+app.use(limiter);
 
 // Routes
 app.get('/', (req, res) => {
