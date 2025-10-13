@@ -11,6 +11,7 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "./ui/button";
 import { Spinner } from "@/components/ui/spinner"
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formData: FormData) => void, isPending: boolean, className?: string })=>{
     const [code, setCode] = useState("")
@@ -53,14 +54,28 @@ const ExplainInput = ({ formAction, isPending, className }:{ formAction: (formDa
                         </Select>
                         </div>
                     </div>
-                    <Textarea
-                        name="code"
-                        required
-                        value={code}
-                        onChange={(e)=>setCode(e.target.value)}
-                        placeholder="Paste your code here..."
-                        className="border rounded-lg w-full p-3 font-mono text-sm bg-transparent min-h-[300px] w-full max-w-4xl mt-6 bg-gray-50  p-6 rounded-2xl shadow-lg"
-                    />
+                    <div className="relative rounded-2xl overflow-hidden mt-6">
+                        <Textarea
+                            name="code"
+                            required
+                            value={code}
+                            onChange={(e)=>setCode(e.target.value)}
+                            placeholder="Paste your code here..."
+                            className="border rounded-[inherit] w-full p-6 font-mono text-sm bg-transparent min-h-[300px] max-w-4xl bg-gray-50 shadow-lg"
+                        />
+                        <BorderBeam
+                            duration={6}
+                            size={260}
+                            className="from-transparent via-emerald-400 to-transparent"
+                        />
+                        <BorderBeam
+                            duration={6}
+                            delay={3}
+                            size={260}
+                            borderWidth={1}
+                            className="from-transparent via-green-500 to-transparent"
+                        />
+                    </div>
                     <div className="w-full flex justify-center">
                         <Button
                             type="submit"
