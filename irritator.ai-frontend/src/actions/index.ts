@@ -1,6 +1,6 @@
 "use server";
 
-export async function explain(prevState:any, formData:any ) {
+export async function explain(_prevState:any, formData:any ) {
   const code = formData.get("code");
   const language = formData.get("language");
   const explainCharLength = formData.get("charLength") 

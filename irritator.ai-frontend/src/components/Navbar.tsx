@@ -1,4 +1,3 @@
-import { ModeToggle } from '@/components/mode-toggle'
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 
 const Navbar = ()=> {
