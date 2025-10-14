@@ -6,7 +6,7 @@ export async function explain(prevState:any, formData:any ) {
   const explainCharLength = formData.get("charLength") 
 
   try {
-    const baseUrl = import.meta.env.SERVER_URL || "http://localhost:3000";
+    const baseUrl = import.meta.env.VITE_SERVER_URL;
     const res = await fetch(`${baseUrl}/api/explain-code`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
