@@ -12,7 +12,7 @@ const Home = () => {
     <div
       className={`min-h-[100dvh] w-screen p-4 md:p-8 lg:p-10 flex flex-col items-center justify-center ${
         formState
-          ? "md:flex-row md:items-start md:justify-center lg:justify-between mt-10 md:mt-10"
+          ? "md:flex-row md:items-start md:justify-center lg:justify-between"
           : "flex-col justify-center items-center"
       } mx-auto max-w-7xl gap-6 lg:gap-10`}
     >

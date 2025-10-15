@@ -25,7 +25,7 @@ const ExplainInput = ({ formAction, isPending, className,hideHeading }: ExplainI
   const [charLength, setCharLength] = useState("");
 
   return (
-    <div className={`${className ?? "w-full"} flex flex-col items-center justify-center h-full md:p`}>
+    <div className={`${className ?? "w-full"} flex flex-col items-center justify-center h-full pt-10`}>
       <h1
         className={`text-4xl sm:text-5xl font-extrabold text-center bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 bg-clip-text text-transparent mb-2 leading-tight transition-all duration-300 ${
         hideHeading ? "opacity-0 h-0 overflow-hidden" : "opacity-100"}`}
