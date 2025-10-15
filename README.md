@@ -1,8 +1,8 @@
 # Irritator AI
 
-![Irritator AI Preview](frontend/assets/preview.png)
+<img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/5addac04-f0d6-4ba6-9888-42c7bbb28a36" />
 
-[Try it live →](https://irritatorai.vercel.app)
+[Irritator.ai](https://irritatorai.vercel.app)
 
 Irritator AI is a simple and friendly code explainer. Paste your code, click **Explain**, and get a clear, human-friendly explanation instantly.  
 
