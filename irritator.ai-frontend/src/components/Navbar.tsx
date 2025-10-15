@@ -3,11 +3,11 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 const Navbar = ()=> {
     return(
         <>
-            <div className='flex fixed w-full items-center justify-between px-4 md:px-10 h-15'>
-                <div className='flex items-center gap-5'>
+            <div className='flex top-0 justify-end fixed w-full items-center justify-between px-4 md:px-10 h-15'>
+                {/* <div className='flex items-center gap-5'> */}
                     {/* <h1 className='text-2xl font-bold bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 bg-clip-text text-transparent'>irritator.ai</h1> */}
                     {/* <img src="/logo.png" height={20} width={160} alt="irritator.ai"/> */}
-                </div>
+                {/* </div> */}
                 <AnimatedThemeToggler  className='cursor-pointer'/>
             </div>
         </>
